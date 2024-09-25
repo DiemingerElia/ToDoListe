@@ -1,6 +1,5 @@
-let toDoCount = 0;
+let toDoCount = load();
 document.getElementById("add").addEventListener("click", AddTodo);
-
 function AddTodo(){
     let description = document.getElementById("input").value;
     let isNull = true;
@@ -42,6 +41,7 @@ function AddTodo(){
     document.getElementById("output").appendChild(divElement);  //TODO hinzufügen
     toDoCount++;
     document.getElementById("input").value = "";
+    save(toDoCount);
 }
 
 function DeleteTodo(deleteId){      //TODO löschen
