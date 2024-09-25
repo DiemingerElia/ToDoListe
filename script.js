@@ -3,10 +3,20 @@ document.getElementById("add").addEventListener("click", AddTodo);
 
 function AddTodo(){
     let description = document.getElementById("input").value;
-    if(description == "") {
+    let isNull = true;
+    for(let i =0; i < description.length; i++){
+        console.log(isNull);
+        if(description[i] == " ") isNull = true;
+        else {
+            isNull = false;
+            break;
+        }
+    }
+    if(description == "" || isNull == true) {   //eingabe = nichts
         alert("Eingabe kann nicht null sein!");
         return;
     }
+    
     let divElement = document.createElement("div"); //div Element für TODO
     divElement.setAttribute("id", "todo," + toDoCount);
     divElement.setAttribute("class", "toDoElement")
@@ -33,13 +43,13 @@ function AddTodo(){
     toDoCount++;
 }
 
-function DeleteTodo(deleteId){
+function DeleteTodo(deleteId){      //TODO löschen
     if(confirm("Möchten Sie diese Aufgabe wirklich löschen?")) {
         document.getElementById(deleteId).remove();
     } 
 }
 
-function ClickedCheckBox(checkBoxId){
+function ClickedCheckBox(checkBoxId){   //durchstreichen
     let str = checkBoxId.split(",");
     let content = document.getElementById("desc" + str[1]).innerHTML;
     if(content.search('<s>') == -1){
