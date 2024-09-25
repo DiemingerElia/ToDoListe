@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-family: Century Gothic;
+    background-color: #f5f3eb;
+}
+input{
+	height: 3vh;
+	width: 60vh;
+	padding: 1vh;
+}
+button{
+	height: 5vh;
+	width: 15vh;
+	padding: 1vh;
+	background-color: #3CB403;
+	border-style: none;
+	color: white;
+}
+button:hover{
+	background-color: lightgreen;
+	color: black;
+}
+#output{
+	flex-direction: column;
+}
+#output > div > button{
+	height: 5vh;
+	width: 15vh;
+	padding: 1vh;
+	margin-left: 15vh;
+	background-color: #FF0500;
+	border-style: none;
+	color: white;
+}
+#output > div > button:hover{
+	background-color: #FF6865;
+	color: black;
+}
+#output > div{
+	display: flex;
+	justify-items: flex-end;
+	align-items: center;
+	width: 60vh;
+	background-color: white;
+	margin: 4vh;
+	padding: 2vh;
+}
+#output > div > input{
+	width: 2vh;
+	margin-right: 2vh;
+}
+
+
