@@ -3,7 +3,10 @@ document.getElementById("add").addEventListener("click", AddTodo);
 
 function AddTodo(){
     let description = document.getElementById("input").value;
-
+    if(description == "") {
+        alert("Eingabe kann nicht null sein!");
+        return;
+    }
     let divElement = document.createElement("div"); //div Element für TODO
     divElement.setAttribute("id", "todo," + toDoCount);
     divElement.setAttribute("class", "toDoElement")
