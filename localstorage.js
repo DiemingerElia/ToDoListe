@@ -1,6 +1,6 @@
-function save(taskCounter, saveOutputDom = true) {
+function save(toDoCount, saveOutputDom = true) {
     try {
-        localStorage.setItem("taskCounter", taskCounter);
+        localStorage.setItem("toDoCount", toDoCount);
         if (saveOutputDom) {
             let dom = document.getElementById("output");
             localStorage.setItem("dom", dom.innerHTML);
@@ -18,7 +18,7 @@ function load(loadOutputDom = true) {
             let dom = document.getElementById("output");
             dom.innerHTML = localStorage.getItem("dom");
         }
-        return localStorage.getItem("taskCounter");
+        return localStorage.getItem("toDoCount");
     } catch (error) {
         console.error(error);
         return -1;
