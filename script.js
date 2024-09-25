@@ -49,6 +49,7 @@ function DeleteTodo(deleteId){      //TODO löschen
         document.getElementById(deleteId).remove();
     } 
     save(toDoCount);
+    window.location.reload();
 }
 
 function ClickedCheckBox(checkBoxId){   //durchstreichen
