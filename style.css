@@ -1,15 +1,6 @@
 body {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    font-family: Century Gothic;
-    background-color: #f5f3eb;
-}body {
-    display: flex;
-    flex-direction: column;
+    flex-direction:column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -38,7 +29,7 @@ button:hover{
 	height: 5vh;
 	width: 15vh;
 	padding: 1vh;
-	margin-left: 2vh;
+	margin-left: 15vh;
 	background-color: #FF0500;
 	border-style: none;
 	color: white;
@@ -57,6 +48,8 @@ button:hover{
 	padding: 2vh;
 }
 #output > div > input{
-	margin-right: 5vh;
+	width: 2vh;
+	margin-right: 2vh;
 }
+
 
