@@ -48,6 +48,7 @@ function DeleteTodo(deleteId){      //TODO löschen
     if(confirm("Möchten Sie diese Aufgabe wirklich löschen?")) {
         document.getElementById(deleteId).remove();
     } 
+    save(toDoCount);
 }
 
 function ClickedCheckBox(checkBoxId){   //durchstreichen
