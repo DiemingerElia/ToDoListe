@@ -41,6 +41,7 @@ function AddTodo(){
 
     document.getElementById("output").appendChild(divElement);  //TODO hinzufügen
     toDoCount++;
+    document.getElementById("input").value = "";
 }
 
 function DeleteTodo(deleteId){      //TODO löschen
